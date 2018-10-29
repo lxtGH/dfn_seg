@@ -46,7 +46,7 @@ class RRB(nn.Module):
         res = self.bn(res)
         res = self.relu(res)
         res = self.conv3(res)
-        return x + res
+        return self.relu(x + res)
 
 
 class DFN(nn.Module):
